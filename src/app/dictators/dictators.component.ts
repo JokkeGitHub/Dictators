@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Dictator } from './classes/dictator';
 
 @Component({
@@ -9,26 +9,15 @@ import { Dictator } from './classes/dictator';
 
 export class DictatorsComponent implements OnInit {
 
-  title: string = "Dictators";
-  dictators = Dictator;
-
-  //dictators: Dictator[] = [];
+  @Input()
+  dictators: typeof Dictator = [];
   
-  deleteDictator(id: number){
-    
-  }
-
   constructor() { }
+  
+  ngOnInit(): void { }
 
-  ngOnInit(): void {
-    /*
-    this.dictators[0].id = 1;
-    this.dictators[0].firstName = 'hans';
-    this.dictators[0].lastName = 'bob';
-    this.dictators[0].birthYear = 1191;
-    this.dictators[0].deathYear = 1112;
-    this.dictators[0].description = 'ohoy';
-    */
+  deleteDictator(id: number){
+    console.log(id);
   }
 
 }
