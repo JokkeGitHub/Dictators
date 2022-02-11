@@ -1,6 +1,6 @@
 export const Dictator = [
     {
-        "id": 1,
+        //"id": 0,
         "firstName": "Adolf",
         "lastName": "Hitler",
         "birthYear": 1889,
@@ -8,7 +8,7 @@ export const Dictator = [
         "description": "Kan lide patrioter, kan ikke lide jøder"
     },
     {
-        "id": 2,
+        //"id": 1,
         "firstName": "Joseph",
         "lastName": "Staling",
         "birthYear": 1878,

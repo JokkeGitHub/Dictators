@@ -9,7 +9,6 @@
 <table class="table table-hover">
     <thead class="table-boderless table-secondary">
         <tr>
-            <th scope="col">Id</th>
             <th scope="col">First Name</th>
             <th scope="col">Last Name</th>
             <th scope="col">Birth Year</th>
@@ -20,16 +19,14 @@
     </thead>
 
     <tbody>
-        <tr *ngFor="let dictator of dictators">
-            <td scope="row">{{ dictator.id }}</td>
+        <tr *ngFor="let dictator of dictators index as i">
             <td>{{ dictator.firstName }}</td>
             <td>{{ dictator.lastName }}</td>
             <td>{{ dictator.birthYear }}</td>
             <td>{{ dictator.deathYear }}</td>
             <td>{{ dictator.description }}</td>
             <td>
-                <a href="/edit/{{dictator.id}}" type="button" class="btn btn-success btn-sm">Edit</a>
-                <button (click)="deleteDictator(dictator.id)" type="button" class="btn btn-danger btn-sm">Delete</button>
+                <button (click)="deleteDictator(i)" type="button" class="btn btn-danger btn-sm">Delete</button>
             </td>
         </tr>
     </tbody>

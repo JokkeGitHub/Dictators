@@ -25,21 +25,19 @@ export class DictatorsComponent implements OnInit {
   ngOnInit(): void { }
 
   addDictator(firstNameInput: string, lastNameInput: string, birthYearInput: number, deathYearInput: number, descriptionInput: string){
-    this.id = 0;
-
-    for (let index = 0; index < this.dictators.length; index++) {
-      this.id++;
+    let newDictator = {
+      firstName:firstNameInput, 
+      lastName:lastNameInput, 
+      birthYear:birthYearInput, 
+      deathYear:deathYearInput, 
+      description:descriptionInput
     }
-    
-    this.id++;
-    console.log(this.id);
 
-    let newDictator = {id:this.id, firstName:firstNameInput, lastName:lastNameInput, birthYear:birthYearInput, deathYear:deathYearInput, description:descriptionInput}
     this.dictators.push(newDictator);
   }
 
-  deleteDictator(id: number){
-    console.log(id);
+  deleteDictator(index: number){
+    this.dictators.splice(index, 1);
   }
 
 }
