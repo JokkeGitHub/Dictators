@@ -1,5 +1,12 @@
-<table class="table table-hover">
+<input type="text" [(ngModel)]="firstNameInput">
+<input type="text" [(ngModel)]="lastNameInput">
+<input type="number" [(ngModel)]="birthYearInput">
+<input type="number" [(ngModel)]="deathYearInput">
+<input type="text" [(ngModel)]="descriptionInput">
+<button (click)="addDictator(firstNameInput, lastNameInput, birthYearInput, deathYearInput, descriptionInput)" type="button" class="btn btn-success btn-sm">Add to list</button>
 
+
+<table class="table table-hover">
     <thead class="table-boderless table-secondary">
         <tr>
             <th scope="col">Id</th>
@@ -26,5 +33,5 @@
             </td>
         </tr>
     </tbody>
-    
+
 </table>

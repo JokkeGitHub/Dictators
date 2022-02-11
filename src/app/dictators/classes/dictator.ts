@@ -6,6 +6,14 @@ export const Dictator = [
         "birthYear": 1889,
         "deathYear": 1945,
         "description": "Kan lide patrioter, kan ikke lide jøder"
+    },
+    {
+        "id": 2,
+        "firstName": "Joseph",
+        "lastName": "Staling",
+        "birthYear": 1878,
+        "deathYear": 1953,
+        "description": "Kan lide industrialisering, kan ikke lide national socialister"
     }
 ]
 
